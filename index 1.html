@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Primeiro PWA</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+
+  <meta name="theme-color" content="#2196f3">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registrado com sucesso!"))
+        .catch(error => console.error("Erro ao registrar o Service Worker:", error));
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Progressive Web App - Atividade Prática</h1>
+  </header>
+
+  <main>
+    <section class="conteudotop">
+      <img src="icons/logo.jpg" alt="Logo do projeto" width="250">
+      <p>Este site foi desenvolvido utilizando HTML, CSS e pode ser instalado como um aplicativo PWA.</p>
+
+      <a href="sobre.html">
+        <button>Ir para a página Sobre</button>
+      </a>
+    </section>
+
+    <section class="conteudo">
+      <h2>Por que usar PWA?</h2>
+      <ul>
+        <li>Funciona offline.</li>
+        <li>Pode ser instalado no celular.</li>
+        <li>Tem desempenho rápido.</li>
+        <li>Permite recursos modernos, como cache e notificações.</li>
+      </ul>
+    </section>
+
+    <section class="conteudo">
+      <h2>Aplicações Progressivas</h2>
+      <p>
+        PWA significa Progressive Web App, ou Aplicação Web Progressiva.
+        Esse tipo de aplicação busca funcionar em diferentes dispositivos,
+        com boa experiência para o usuário e recursos parecidos com os de um aplicativo nativo.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Projeto PWA desenvolvido em aula.</p>
+  </footer>
+</body>
+</html>
